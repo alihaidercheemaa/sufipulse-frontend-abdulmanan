@@ -109,15 +109,15 @@ export async function POST(request: Request) {
     
     const userEmail = await transporter.sendMail({
 
-      from: '"SufiPulse" <contact@mail.sufipulse.com>',
+      from: '"SufiPulse" <connect@sufipulse.com>',
       to: email,
       subject: "Thank You for Contacting SufiPulse",
       html: userEmailHtml,
     });
     // Send notification email to admin
     const adminEmail = await transporter.sendMail({
-      from: '"SufiPulse" <contact@mail.sufipulse.com>',
-      to: "contact@sufipulse.com",
+      from: '"SufiPulse" <connect@msufipulse.com>',
+      to: "connectt@sufipulse.com",
       subject: `New Contact Form Submission: ${subject}`,
       html: adminEmailHtml,
     });
